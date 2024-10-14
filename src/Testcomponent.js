@@ -1,0 +1,17 @@
+import React from "react";
+import { FlowbiteNavbar } from "../src/components/FlowbiteNavbar"; // Adjust path based on where FlowbiteNavbar is located
+import Header  from "./components/Header";
+
+
+
+const TestComponent = () => {
+return (
+    <div className="text-center p-4">
+        <Header/>
+    {/* Other content */}
+    <h1 className="text-2xl font-bold text-blue-600">This is my React test Component</h1>
+    </div>
+);
+};
+
+export default TestComponent;
