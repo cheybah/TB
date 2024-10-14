@@ -1,6 +1,6 @@
 import './App.css';
 import './index.css'; // Adjust based on your project structure
-import TestComponent from './Testcomponent';
+import TestComponent from './HomePage';
 
 function App() {
   return (

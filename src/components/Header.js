@@ -14,12 +14,15 @@ PopoverPanel,
 } from '@headlessui/react'
 import {
 Bars3Icon,
+
+
 XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnkh, faMosque, faPersonHiking, faPlaceOfWorship, faSun, faPhone} from '@fortawesome/free-solid-svg-icons';
 import { Button } from '@headlessui/react'
+import './Header.css'
 
 
 
@@ -170,7 +173,7 @@ className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-xl overflow-hidden
 
         <PopoverPanel
             transition
-            className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-lg overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+            className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
         >
             <div className="p-4">
             {products.map((item) => (
@@ -211,10 +214,10 @@ className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-xl overflow-hidden
         </a>
     </PopoverGroup>
     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-    <Button className="flex btn items-center justify-center gap-2 rounded bg-[#85B919] py-3 px-6 text-xl text-white transition-all hover:bg-[#76a717] hover:gap-4 active:bg-[#6a940f]">
-    <FontAwesomeIcon icon={faPhone} className="transition-transform duration-300" />
-    71 124 124
-</Button>
+    <button className="flex items-center justify-center gap-2 rounded bg-[#85B919] py-3 px-6 text-xl text-white transition-all hover:bg-[#76a717] hover:gap-4 active:bg-[#6a940f]">
+            <FontAwesomeIcon icon={faPhone} className="icon-hover" />
+            71 124 124
+        </button>
     </div>
     </nav>
     <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">

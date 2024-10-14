@@ -1,0 +1,8 @@
+/* custom.css */
+.icon-hover {
+    transition: transform 0.3s ease !important;
+}
+
+.icon-hover:hover {
+    transform: translateX(-10px) !important;
+}

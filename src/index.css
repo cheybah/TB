@@ -12,18 +12,9 @@ code {
     monospace;
 }
 
-@media (min-width: 1024px) {
-  .lg\:px-8 {
-      padding-left: 5rem !important;
-      padding-right: 5rem !important;
-  }
+a{
+  text-decoration: none !important;
 }
-
-.btn{
-  border-radius: 15px !important;
-}
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
