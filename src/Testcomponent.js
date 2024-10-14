@@ -1,5 +1,4 @@
 import React from "react";
-import { FlowbiteNavbar } from "../src/components/FlowbiteNavbar"; // Adjust path based on where FlowbiteNavbar is located
 import Header  from "./components/Header";
 
 

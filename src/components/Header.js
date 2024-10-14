@@ -13,42 +13,52 @@ PopoverGroup,
 PopoverPanel,
 } from '@headlessui/react'
 import {
-ArrowPathIcon,
 Bars3Icon,
-ChartPieIcon,
-CursorArrowRaysIcon,
-FingerPrintIcon,
-SquaresPlusIcon,
 XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAnkh, faMosque, faPersonHiking, faPlaceOfWorship, faSun, faPhone} from '@fortawesome/free-solid-svg-icons';
+import { Button } from '@headlessui/react'
+
+
 
 const products = [
-{ name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-{ name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-{ name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-{ name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-{ name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+{ name: 'Omra', description: 'Voyage spirituel pour accomplir le pèlerinage en toute sérénité', href: '#', icon: faMosque },
+{ name: 'Circuit Sud', description: 'Découvrez les trésors du désert tunisien, entre dunes et oasis', href: '#', icon: faSun },
+{ name: 'Circuit Nord', description: 'Explorez les sites historiques et côtiers du nord de la Tunisie', href: '#', icon: faPersonHiking },
+{ name: 'Turquie', description: 'Plongez dans la richesse culturelle et historique de la Turquie', href: '#', icon: faPlaceOfWorship },
+{ name: 'Egypte', description: 'Partez à la découverte des merveilles antiques de l`Égypte', href: '#', icon: faAnkh },
 ]
 const callsToAction = [
-{ name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-{ name: 'Contact sales', href: '#', icon: PhoneIcon },
+{ name: 'Réservez', href: '#', icon: PlayCircleIcon },
+{ name: 'Voir plus d`offres', href: '#', icon: PhoneIcon },
 ]
 
-const productsColumn1 = [
-{ name: "Product 1", href: "#", description: "Description for product 1" },
-{ name: "Product 2", href: "#", description: "Description for product 2" },
+const topDestinations = [
+{ name: "Hôtel Tunisie", href: "#"},
+{ name: "Hôtel Hammamet", href: "#" },
+{ name: "Hôtel Tabarka", href: "#" },
+{ name: "Hôtel Monastir", href: "#" },
+{ name: "Hôtel Mahdia", href: "#" },
+{ name: "Hôtel Djerba", href: "#" },
+{ name: "Hôtel Tunis", href: "#" },
+{ name: "Hôtel Tozeur", href: "#" },
+{ name: "Hôtel Korbous", href: "#" },
+
 // Add more items as needed
 ];
-const productsColumn2 = [
-{ name: "Product 1", href: "#", description: "Description for product 1" },
-{ name: "Product 2", href: "#", description: "Description for product 2" },
-// Add more items as needed
+const autresHotels = [
+{ name : "Hotel kelibia", href : "#"},
+{ name : "Hotel Bizerte", href : "#"},
+{ name : "Hotel Nabeul", href : "#"},
 ];
 
-const productsColumn3 = [
-{ name: "Product 1", href: "#", description: "Description for product 1" },
-{ name: "Product 2", href: "#", description: "Description for product 2" },
+const offresSpeciales = [
+{ name: "Early Booking", href: "#"},
+{ name: "Hôtel avec Toboggan", href: "#"},
+{ name: "Spécial Couple", href: "#"},
+{ name: "Spécial ÉTÉ", href: "#"},
 // Add more items as needed
 ];
 
@@ -80,15 +90,87 @@ return (
         </button>
     </div>
     <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+        
+<Popover className="relative">
+<PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-gray-900">
+Hôtels Tunisie
+<ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
+</PopoverButton>
+
+<PopoverPanel
+transition
+className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+>
+<div className="p-4 grid grid-cols-3 gap-4">
+    {/* Column 1 */}
+    <div className="col-span-1">
+    <h3 className="text-base font-semibold text-gray-900">Top Destinations</h3>
+    {topDestinations.map((item) => (
+        <div
+        key={item.name}
+        className="relative flex items-start gap-x-4 rounded-lg pt-4 pl-4 pr-4 text-sm hover:bg-gray-50"
+        >
+        <div className="flex-auto">
+            <a href={item.href} className="block font-normal text-gray-900">
+            {item.name}
+            <span className="absolute inset-0" />
+            </a>
+            <p className="mt-1 text-gray-600">{item.description}</p>
+        </div>
+        </div>
+    ))}
+    </div>
+
+    {/* Column 2 */}
+    <div className="col-span-1">
+    <h3 className="text-base font-semibold text-gray-900">Autres Hôtels Tunisie</h3>
+    {autresHotels.map((item) => (
+        <div
+        key={item.name}
+        className="relative flex items-start gap-x-4 rounded-lg pt-4 pl-4 pr-4 text-sm hover:bg-gray-50"
+        >
+        <div className="flex-auto">
+            <a href={item.href} className="block font-normal text-gray-900">
+            {item.name}
+            <span className="absolute inset-0" />
+            </a>
+            <p className="mt-1 text-gray-600">{item.description}</p>
+        </div>
+        </div>
+    ))}
+    </div>
+
+    {/* Column 3 */}
+    <div className="col-span-1">
+    <h3 className="text-base font-semibold text-gray-900">Nos Offres Spéciales</h3>
+    {offresSpeciales.map((item) => (
+        <div
+        key={item.name}
+        className="relative flex items-start gap-x-4 rounded-lg pt-4 pl-4 pr-4 text-sm hover:bg-gray-50"
+        >
+        <div className="flex-auto">
+            <a href={item.href} className="block font-normal text-gray-900">
+            {item.name}
+            <span className="absolute inset-0" />
+            </a>
+            <p className="mt-1 text-gray-600">{item.description}</p>
+        </div>
+        </div>
+    ))}
+    </div>
+</div>
+</PopoverPanel>
+</Popover>
+
         <Popover className="relative">
-        <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-            Hôtels Tunisie
-            <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
+        <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-gray-900">
+        Voyages Organisés
+        <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
         </PopoverButton>
 
         <PopoverPanel
             transition
-            className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+            className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-lg overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
         >
             <div className="p-4">
             {products.map((item) => (
@@ -97,7 +179,7 @@ return (
                 className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                 >
                 <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                    <item.icon aria-hidden="true" className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
+                    <FontAwesomeIcon icon={item.icon} aria-hidden="true" className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
                 </div>
                 <div className="flex-auto">
                     <a href={item.href} className="block font-semibold text-gray-900">
@@ -116,7 +198,7 @@ return (
                 href={item.href}
                 className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                 >
-                <item.icon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
+                <FontAwesomeIcon icon={item.icon} aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
                 {item.name}
                 </a>
             ))}
@@ -124,85 +206,15 @@ return (
         </PopoverPanel>
         </Popover>
 
-<Popover className="relative">
-<PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-Voyages Organisés
-<ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
-</PopoverButton>
-
-<PopoverPanel
-transition
-className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
->
-<div className="p-4 grid grid-cols-3 gap-4">
-    {/* Column 1 */}
-    <div className="col-span-1">
-    <h3 className="text-sm font-semibold text-gray-900">Column 1</h3>
-    {productsColumn1.map((item) => (
-        <div
-        key={item.name}
-        className="relative flex items-start gap-x-4 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-        >
-        <div className="flex-auto">
-            <a href={item.href} className="block font-semibold text-gray-900">
-            {item.name}
-            <span className="absolute inset-0" />
-            </a>
-            <p className="mt-1 text-gray-600">{item.description}</p>
-        </div>
-        </div>
-    ))}
-    </div>
-
-    {/* Column 2 */}
-    <div className="col-span-1">
-    <h3 className="text-sm font-semibold text-gray-900">Column 2</h3>
-    {productsColumn2.map((item) => (
-        <div
-        key={item.name}
-        className="relative flex items-start gap-x-4 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-        >
-        <div className="flex-auto">
-            <a href={item.href} className="block font-semibold text-gray-900">
-            {item.name}
-            <span className="absolute inset-0" />
-            </a>
-            <p className="mt-1 text-gray-600">{item.description}</p>
-        </div>
-        </div>
-    ))}
-    </div>
-
-    {/* Column 3 */}
-    <div className="col-span-1">
-    <h3 className="text-sm font-semibold text-gray-900">Column 3</h3>
-    {productsColumn3.map((item) => (
-        <div
-        key={item.name}
-        className="relative flex items-start gap-x-4 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-        >
-        <div className="flex-auto">
-            <a href={item.href} className="block font-semibold text-gray-900">
-            {item.name}
-            <span className="absolute inset-0" />
-            </a>
-            <p className="mt-1 text-gray-600">{item.description}</p>
-        </div>
-        </div>
-    ))}
-    </div>
-</div>
-</PopoverPanel>
-</Popover>
-
-        <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+        <a href="#" className="text-md font-semibold leading-6 text-gray-900">
         Demande de Groupe
         </a>
     </PopoverGroup>
     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-        Log in <span aria-hidden="true">&rarr;</span>
-        </a>
+    <Button className="flex btn items-center justify-center gap-2 rounded bg-[#85B919] py-3 px-6 text-xl text-white transition-all hover:bg-[#76a717] hover:gap-4 active:bg-[#6a940f]">
+    <FontAwesomeIcon icon={faPhone} className="transition-transform duration-300" />
+    71 124 124
+</Button>
     </div>
     </nav>
     <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -231,11 +243,29 @@ className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden
             <div className="space-y-2 py-6">
             <Disclosure as="div" className="-mx-3">
                 <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                Product
+                Hôtels Tunisie
                 <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
                 </DisclosureButton>
                 <DisclosurePanel className="mt-2 space-y-2">
-                {[...products, ...callsToAction].map((item) => (
+                {[...topDestinations, ...callsToAction].map((item) => (
+                    <DisclosureButton
+                    key={item.name}
+                    as="a"
+                    href={item.href}
+                    className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                    {item.name}
+                    </DisclosureButton>
+                ))}
+                </DisclosurePanel>
+            </Disclosure>
+            <Disclosure as="div" className="-mx-3">
+                <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                Voyages Organisés 
+                <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
+                </DisclosureButton>
+                <DisclosurePanel className="mt-2 space-y-2">
+                {[...products].map((item) => (
                     <DisclosureButton
                     key={item.name}
                     as="a"
@@ -251,19 +281,7 @@ className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden
                 href="#"
                 className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
             >
-                Features
-            </a>
-            <a
-                href="#"
-                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-            >
-                Marketplace
-            </a>
-            <a
-                href="#"
-                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-            >
-                Company
+                Demande de Groupe
             </a>
             </div>
             <div className="py-6">
@@ -274,6 +292,7 @@ className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden
                 Log in
             </a>
             </div>
+
         </div>
         </div>
     </DialogPanel>
