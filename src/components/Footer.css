@@ -160,3 +160,8 @@ color: #85B919;
 font-size: 14px;
 color: #878787;
 }
+
+.container-fluid{
+    padding-left: 10rem !important;
+    padding-right: 10rem !important;
+}
