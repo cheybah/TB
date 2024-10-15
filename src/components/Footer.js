@@ -1,8 +1,8 @@
 import React from 'react';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faGooglePlusG, faTwitter, faTelegram} from '@fortawesome/free-brands-svg-icons';
-import { faMapPin, faPhone , faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faTelegram, faYoutube, faInstagram} from '@fortawesome/free-brands-svg-icons';
+import { faMapPin, faPhone , faEnvelope, } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
     return (
@@ -47,52 +47,53 @@ const Footer = () => {
                                         <a href="index.html"><img src="https://tn.tunisiebooking.com/images/icons-menu-moteur/logo-TunisieBooking1.svg" className="img-fluid" alt="logo" /></a>
                                     </div>
                                     <div className="footer-text">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <p>Découvrez les meilleurs séjours en Tunisie avec TunisieBooking. Votre escapade parfaite est à portée de clic.</p>
                                     </div>
-                                    <div className="footer-social-icon">
-                                        <span>Follow us</span>
-                                        <a href="#" aria-label="Facebook">
-                                            <FontAwesomeIcon icon={faFacebookF} className="text-blue-500" />
-                                        </a>
-                                        <a href="#" aria-label="Twitter">
-                                            <FontAwesomeIcon icon={faTwitter} className="text-blue-400" />
-                                        </a>
-                                        <a href="#" aria-label="Google Plus">
-                                            <FontAwesomeIcon icon={faGooglePlusG} className="text-red-600" />
-                                        </a>
-                                    </div>
+                                    <div className="footer-social-icon flex space-x-4">
+                                    <span>Suivez-nous</span>
+                                    <a href="https://www.facebook.com/Tunisiebookingcom" aria-label="Facebook" className="group">
+                                        <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-500 text-white transform transition-transform duration-300 group-hover:rotate-180">
+                                            <FontAwesomeIcon icon={faFacebookF} size="lg" />
+                                        </div>
+                                    </a>
+                                    <a href="https://www.instagram.com/tunisiebooking/" aria-label="Instagram" className="group">
+                                        <div className="w-12 h-12 flex items-center justify-center rounded-full bg-violet-400 text-white transform transition-transform duration-300 group-hover:rotate-180">
+                                            <FontAwesomeIcon icon={faInstagram} size="lg" />
+                                        </div>
+                                    </a>
+                                    <a href="https://www.youtube.com/channel/UC71hBISp8WOPP8rEAeHb-rg" aria-label="Youtube" className="group">
+                                        <div className="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white transform transition-transform duration-300 group-hover:rotate-180">
+                                            <FontAwesomeIcon icon={faYoutube} size="lg" />
+                                        </div>
+                                    </a>
+                                </div>
                                 </div>
                             </div>
                             <div className="col-xl-4 col-lg-4 col-md-6 mb-30">
                                 <div className="footer-widget">
                                     <div className="footer-widget-heading">
-                                        <h3>Useful Links</h3>
+                                        <h3>Liens Utiles</h3>
                                     </div>
                                     <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Accueil</a></li>
+                                        <li><a href="#">À propos</a></li>
                                         <li><a href="#">Services</a></li>
-                                        <li><a href="#">Portfolio</a></li>
+                                        <li><a href="#">Offres</a></li>
                                         <li><a href="#">Contact</a></li>
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Our Services</a></li>
-                                        <li><a href="#">Expert Team</a></li>
-                                        <li><a href="#">Contact us</a></li>
-                                        <li><a href="#">Latest News</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
                                 <div className="footer-widget">
                                     <div className="footer-widget-heading">
-                                        <h3>Subscribe</h3>
+                                        <h3>S'abonner</h3>
                                     </div>
                                     <div className="footer-text mb-25">
-                                        <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                        <p>Ne manquez pas de vous abonner à nos nouveaux flux, merci de bien vouloir remplir le formulaire ci-dessous.</p>
                                     </div>
                                     <div className="subscribe-form">
                                         <form action="#">
-                                            <input type="text" placeholder="Email Address" />
+                                            <input type="text" placeholder="Adresse Email" />
                                             <button><FontAwesomeIcon icon={faTelegram} className='text-stone-50' size='2x'/></button>
                                         </form>
                                     </div>
