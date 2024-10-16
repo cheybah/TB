@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import './components/SplashScreen.css';
 import Slides from "./components/Slides/Slides";
 import Carousel from "./components/Carousel/Carousel";
+import Separator from "./components/Separator/Separator";
 
 
 // Splash Screen Component
@@ -42,6 +43,7 @@ return (
         <Header />
         <HeroSection />
         <Slides />
+        <Separator />
         <Carousel />
         <h1 className="text-2xl font-bold text-blue-600">
             I'm  here
