@@ -1,43 +1,42 @@
 /* Container to center the logo */
 .splash-screen {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  /* Floating logo animation */
-  .floating-logo {
-    width: 300px; /* Adjust logo size */
-    height: 300px;
-    animation: floatIn 2.5s ease-in-out forwards, floatOut 1.5s ease-in-out 2.5s forwards;
+position: relative;
+overflow: hidden;
+}
+
+/* Floating logo animation */
+.floating-logo {
+width: 300px; /* Adjust logo size */
+height: 300px;
+animation: floatIn 2.5s ease-in-out forwards, floatOut 1.5s ease-in-out 2.5s forwards;
 }
 
 /* Keyframes for floating in from a higher position */
 @keyframes floatIn {
-  0% {
-    transform: translateY(-50px); /* Start a little above the center */
-    opacity: 0; /* Fully transparent at the start */
-  }
-  75% {
-    transform: translateY(0); /* Move to center */
-    opacity: 1; /* Fully visible at the center */
-  }
-  100% {
-    transform: translateY(0); /* Stay at the center */
-    opacity: 1; /* Fully visible */
-  }
+0% {
+transform: translateY(-50px); /* Start a little above the center */
+opacity: 0; /* Fully transparent at the start */
 }
-  
-  
+75% {
+transform: translateY(0); /* Move to center */
+opacity: 1; /* Fully visible at the center */
+}
+100% {
+transform: translateY(0); /* Stay at the center */
+opacity: 1; /* Fully visible */
+}
+}
+
+
 /* Keyframes for floating out to the right, fading away */
 @keyframes floatOut {
-    0% {
-      transform: translateY(0) translateX(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(50px); /* Move slightly to the right */
-      opacity: 0; /* Fade out */
-    }
-  }
-  
-  
+0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+}
+100% {
+    transform: translateX(50px); /* Move slightly to the right */
+    opacity: 0; /* Fade out */
+}
+}
+

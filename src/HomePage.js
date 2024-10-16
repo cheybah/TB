@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Header  from "./components/Header";
+import Header  from "./components/Header/Header";
 import HeroSection from "./components/HeroSection";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import './components/SplashScreen.css';
 
 
@@ -26,7 +26,7 @@ useEffect(() => {
     const timer = setTimeout(() => {
     setLoading(false);
     }, 3500);
-    return () => clearTimeout(timer); // Clean up the timer when component unmounts
+    return () => clearTimeout(timer);
 }, []);
 
 return (
