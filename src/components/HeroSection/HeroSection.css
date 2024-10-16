@@ -61,3 +61,8 @@ button#clear:hover {
 #search-btn:hover {
     background-color: #218838; /* Darker green on hover */
 }
+
+.justify-center1{
+    margin-top: 10vh !important;
+
+}

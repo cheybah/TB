@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Header  from "./components/Header/Header";
-import HeroSection from "./components/HeroSection";
+import HeroSection from "./components/HeroSection/HeroSection";
 import Footer from "./components/Footer/Footer";
 import './components/SplashScreen.css';
+import Slides from "./components/Slides/Slides";
 
 
 // Splash Screen Component
@@ -39,8 +40,9 @@ return (
         <>
         <Header />
         <HeroSection />
+        <Slides />
         <h1 className="text-2xl font-bold text-blue-600">
-            This is my React test Component
+            I'm  here
         </h1>
         <Footer />
         </>
