@@ -1,18 +1,18 @@
 import React from "react";
 import {
-    Accordion,
-    AccordionHeader,
-    AccordionBody,
-  } from "@material-tailwind/react";
+Accordion,
+AccordionHeader,
+AccordionBody,
+} from "@material-tailwind/react";
 
-  const CUSTOM_ANIMATION = {
-    mount: { scale: 1 },
-    unmount: { scale: 0.9 },
-  };
+const CUSTOM_ANIMATION = {
+mount: { scale: 1 },
+unmount: { scale: 0.9 },
+};
 
 const AdTb = () => {
 const [open, setOpen] = React.useState(0);
- 
+
 const handleOpen = (value) => setOpen(open === value ? 0 : value);
     return (
         <><div>
@@ -51,17 +51,7 @@ const handleOpen = (value) => setOpen(open === value ? 0 : value);
                 </Accordion>
                 <Accordion style={{marginLeft: '15px' , marginRight: '15px'}} open={open === 3} animate={CUSTOM_ANIMATION}>
                     <AccordionHeader onClick={() => handleOpen(3)}>
-                    Pourquoi choisir notre agence de voyage TunisieBooking ?  
-                    </AccordionHeader>
-                    <AccordionBody>
-                        We&apos;re not always in the position that we want to be at. We&apos;re constantly
-                        growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
-                        ourselves and actualize our dreams.
-                    </AccordionBody>
-                </Accordion>
-                <Accordion style={{marginLeft: '15px' , marginRight: '15px'}} open={open === 3} animate={CUSTOM_ANIMATION}>
-                    <AccordionHeader onClick={() => handleOpen(3)}>
-                    Vos vacances de rêve soigneusement sélectionnées.
+                        Pourquoi choisir notre agence de voyage TunisieBooking ?  
                     </AccordionHeader>
                     <AccordionBody>
                         We&apos;re not always in the position that we want to be at. We&apos;re constantly

@@ -20,7 +20,7 @@ XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAnkh, faMosque, faPersonHiking, faPlaceOfWorship, faSun, faPhone} from '@fortawesome/free-solid-svg-icons';
+import { faAnkh, faMosque, faPersonHiking, faPlaceOfWorship, faSun, faPhone, faCircleInfo} from '@fortawesome/free-solid-svg-icons';
 import { Button } from '@headlessui/react'
 import './Header.css'
 
@@ -214,9 +214,11 @@ className="absolute -left-8 top-full z-10 mt-31 w-screen max-w-xl overflow-hidde
         </a>
     </PopoverGroup>
     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-    <button className="flex items-center justify-center gap-2 rounded bg-[#85B919] py-3 px-6 text-xl text-white transition-all hover:bg-[#76a717] hover:gap-4 active:bg-[#6a940f]">
+    <button className="flex items-center justify-center gap-2 rounded bg-[#FFFFFF] py-3 px-6 text-xl text-black transition-all hover:bg-[#FFFFF] hover:gap-4 active:bg-[#6a940f]">
             <FontAwesomeIcon icon={faPhone} className="icon-hover" />
             71 124 124
+            <FontAwesomeIcon icon={faCircleInfo} className="icon-hover1" />
+
         </button>
     </div>
     </nav>

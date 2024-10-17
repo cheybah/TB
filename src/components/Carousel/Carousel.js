@@ -39,8 +39,8 @@ return (
         perPage: 3, 
         focus: 'center', // Focus on the center item
         autoplay: true, // Automatically plays the slides
-        interval: 3000, // Increased interval (3 seconds)
-        speed: 900, // Transition speed for smoothness
+        interval: 2000, // Increased interval (3 seconds)
+        speed: 700, // Transition speed for smoothness
         pauseOnHover: true, 
         flickMaxPages: 1, 
         updateOnMove: true,
