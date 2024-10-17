@@ -6,6 +6,7 @@ import './components/SplashScreen.css';
 import Slides from "./components/Slides/Slides";
 import Carousel from "./components/Carousel/Carousel";
 import Separator from "./components/Separator/Separator";
+import TopDestinations from "./components/TopDestinations/TopDestinations";
 
 
 // Splash Screen Component
@@ -45,6 +46,7 @@ return (
         <Slides />
         <Separator />
         <Carousel />
+        <TopDestinations />
         <h1 className="text-2xl font-bold text-blue-600">
             I'm  here
         </h1>

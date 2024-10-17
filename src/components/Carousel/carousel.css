@@ -69,6 +69,15 @@ transform: translateX(0px);
     --bs-bg-opacity:1 !important;
     background-color: rgb(255 255 255 / 45%) !important;
     border: solid 2px white !important;
+    font-size: x-large;
+}
+
+.bg-white0:hover{
+    --bs-bg-opacity:1 !important;
+    background-color: white !important;
+    border: solid 2px grey !important;
+    color: grey ! important;
+    font-size: 26px ;
 }
 
 h2 {
