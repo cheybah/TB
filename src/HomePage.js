@@ -7,6 +7,7 @@ import Slides from "./components/Slides/Slides";
 import Carousel from "./components/Carousel/Carousel";
 import Separator from "./components/Separator/Separator";
 import TopDestinations from "./components/TopDestinations/TopDestinations";
+import AdTb from "./components/AdTB/AdTB";
 
 
 // Splash Screen Component
@@ -47,9 +48,8 @@ return (
         <Separator />
         <Carousel />
         <TopDestinations />
-        <h1 className="text-2xl font-bold text-blue-600">
-            I'm  here
-        </h1>
+        <AdTb />
+        <Separator />
         <Footer />
         </>
     )}

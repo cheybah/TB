@@ -92,7 +92,7 @@ if (entry.isIntersecting) {
     observer.disconnect(); // Stop observing after the first intersection
 }
 },
-{ threshold: 0.6 }
+{ threshold: 0.5 }  //take a look at this later 
 );
 
 if (sectionRef.current) observer.observe(sectionRef.current);
