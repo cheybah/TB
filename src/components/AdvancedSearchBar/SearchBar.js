@@ -158,7 +158,7 @@ return (
         <div className='optionItem'>
         <span className='optionText'>Children</span>
         <div className='optionCounter'>
-        <button className='optionCounterButton' onClick={()=>handleOption("children","d")}>-</button>
+        <button disabled= {options.children <= 0} className='optionCounterButton' onClick={()=>handleOption("children","d")}>-</button>
         <span className='optionCounterNumber'>{options.children}</span>
         <button className='optionCounterButton'onClick={()=>handleOption("children","i")}>+</button>
         </div>
