@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Header  from "./components/Header/Header";
-import HeroSection from "./components/HeroSection/HeroSection";
-import Footer from "./components/Footer/Footer";
-import './components/SplashScreen.css';
-import Slides from "./components/Slides/Slides";
-import Carousel from "./components/Carousel/Carousel";
-import Separator from "./components/Separator/Separator";
-import TopDestinations from "./components/TopDestinations/TopDestinations";
-import AdTb from "./components/AdTB/AdTB";
+import Header  from "../components/Header/Header";
+import HeroSection from "../components/HeroSection/HeroSection";
+import Footer from "../components/Footer/Footer";
+import '../pages/SplashScreen.css';
+import Carousel from "../components/Carousel/Carousel";
+import Separator from "../components/Separator/Separator";
+import Slides from "../components/Slides/Slides";
+import TopDestinations from "../components/TopDestinations/TopDestinations";
+import AdTb from "../components/AdTB/AdTB";
 
 
 // Splash Screen Component
